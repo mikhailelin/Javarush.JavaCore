@@ -1,6 +1,6 @@
 package com.javarush.task.task13.task1327;
 
-public class Person {
+public class Person implements RepkaItem{
     private String name;
     private String namePadezh;
 
@@ -18,10 +18,14 @@ public class Person {
     }
 
     public String getNamePadezh() {
-        return namePadezh;
+        return this.namePadezh;
     }
 
     public void setNamePadezh(String namePadezh) {
         this.namePadezh = namePadezh;
+    }
+
+    public void pull(Person person){
+        System.out.println(this.name + " за " + person.namePadezh);
     }
 }
